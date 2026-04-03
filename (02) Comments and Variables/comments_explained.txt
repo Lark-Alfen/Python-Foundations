@@ -1,0 +1,35 @@
+Comments in Python
+
+Comments are lines in your code that start with the '#' symbol, or are enclosed in triple quotes ''' or """ (called docstrings). They are not executed by Python and are only there to help you and others understand what the code does.
+
+For example, in the fibonacci.py program:
+
+"""
+Fibonacci sequence generator
+This program prints the first n numbers in the Fibonacci sequence
+"""
+
+n = 10  # Number of Fibonacci numbers to print
+
+a = 0  # First number in the sequence
+b = 1  # Second number in the sequence
+
+print(a)  # Print the first number
+print(b)  # Print the second number
+
+for i in range(n - 2):  # Loop to print the next numbers
+    c = a + b  # Calculate the next number
+    print(c)  # Print the next number
+    a = b  # Update a to the previous b
+    b = c  # Update b to the new c
+
+"""
+Comments in Python start with the '#' symbol or can use triple quotes ''' or """ for docstrings.
+They are ignored by the Python interpreter and are used to explain code.
+"""
+
+In summary:
+- Comments make your code easier to understand.
+- They do not affect how your program runs.
+- Use comments to explain what your code is doing, especially for complex parts.
+- Docstrings are used for documentation and can be placed at the beginning of files, functions, or classes.

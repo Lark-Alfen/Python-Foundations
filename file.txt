@@ -1,0 +1,5 @@
+Hello, this is a sample file for file handling exercises.
+Line 1: Python is fun!
+Line 2: File handling is important.
+Line 3: Practice makes perfect.
+Line 4: End of file.

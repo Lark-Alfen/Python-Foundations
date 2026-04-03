@@ -1,0 +1,31 @@
+Python Installation Guide
+
+To get started with Python, follow these steps:
+
+1. Download Python:
+   - Open any web browser and go to python.org.
+   - Download the version of Python suitable for your operating system (Windows, Mac, or Linux).
+
+2. Install Python:
+   - Run the installer you downloaded.
+   - Follow the installation instructions. This will install the Python Virtual Machine, which is responsible for converting your code into byte code that the computer can execute.
+
+3. Choose an IDE (Integrated Development Environment):
+   - An IDE is a tool that helps you write and run your code more easily. While you can use the basic Python virtual machine, it is more convenient to use an IDE.
+   - Popular IDEs for Python include VS Code, PyCharm, and Jupyter. For this course, we recommend using VS Code.
+
+4. Set Up Your IDE:
+   - Open VS Code.
+   - Go to the Extensions section and install the 'Python' extension and the 'Code Runner' extension. These will help you write and run Python code efficiently.
+
+5. Create Your First Program:
+   - After setting up Python and your IDE, you are ready to write your first Python program. (Note: In this course, your first program will not be the traditional "Hello World" example!)
+
+Summary:
+- Download Python from python.org.
+- Install Python on your computer.
+- Choose and set up an IDE (VS Code recommended).
+- Install necessary extensions in VS Code.
+- Start coding your first Python program!
+
+If you need more help, watch the full video on the official Sheryians AI YouTube channel for visual explanations and examples.
