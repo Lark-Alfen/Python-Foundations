@@ -241,31 +241,79 @@ Line-by-line explanation:
 """
 
 # Demonstrating copy: assignment vs .copy()
-print("\nCopying lists: assignment vs .copy() demonstration:")
-print("Using assignment (deep copy):")
-input("Press Enter to continue...")
-original = [1, 2, 3, 4, 5]
-deep_copy = original  # Assignment: both variables point to the same list
-deep_copy[0] = 99  # Change first element in deep_copy
-print(f"After modifying deep_copy:")
-print(f"original (shows change): {original}")  # Shows change in original
-print(f"deep_copy: {deep_copy}")        # Shows change in deep_copy
+print("\nCopying lists: assignment vs shallow copy vs deep copy demonstration:")
+
+# ==============================
+# Assignment (NOT a copy)
+# ==============================
+print("Using assignment (NOT a copy):")
 input("Press Enter to continue...")
 
-# Using .copy() for shallow copy
+original = [1, 2, 3, 4, 5]
+assigned = original  # Assignment: both variables point to the SAME list
+
+assigned[0] = 99  # Modify assigned list
+
+print("After modifying assigned:")
+print(f"original (shows change): {original}")
+print(f"assigned: {assigned}")
+
+input("Press Enter to continue...")
+
+
+# ==============================
+# Shallow Copy
+# ==============================
 print("\nUsing .copy() for shallow copy:")
 input("Press Enter to continue...")
+
 original = [1, 2, 3, 4, 5]
-shallow_copy = original.copy()  # Shallow copy: new list, same values
-shallow_copy[0] = 77  # Change first element in shallow_copy
-print(f"After modifying shallow_copy:")
-print(f"original (remains unchanged): {original}")      # Original remains unchanged
-print(f"shallow_copy: {shallow_copy}")  # Only shallow_copy changes
+shallow_copy = original.copy()  # New list created
+
+shallow_copy[0] = 77
+
+print("After modifying shallow_copy:")
+print(f"original (remains unchanged): {original}")
+print(f"shallow_copy: {shallow_copy}")
+
 input("Press Enter to continue...")
+
+
+# ==============================
+# Deep Copy (with nested list)
+# ==============================
+import copy
+
+print("\nUsing deepcopy() for deep copy:")
+input("Press Enter to continue...")
+
+original = [[1, 2], [3, 4]]
+deep_copy = copy.deepcopy(original)
+
+deep_copy[0][0] = 111
+
+print("After modifying deep_copy:")
+print(f"original (remains unchanged): {original}")
+print(f"deep_copy: {deep_copy}")
+
+input("Press Enter to continue...")
+
 
 """
 Explanation:
-- deep_copy = original: Both variables refer to the same list in memory (deep copy). Changing one changes the other.
-- shallow_copy = original.copy(): Creates a new list with the same values (shallow copy). Changing one does not affect the other.
-- Use .copy() when you want a separate list that won't affect the original.
+
+1. assigned = original
+   - This is NOT a copy.
+   - Both variables reference the SAME list.
+   - Changing one changes the other.
+
+2. shallow_copy = original.copy()
+   - Creates a new outer list.
+   - Works independently for simple (non-nested) lists.
+   - Nested objects are still shared.
+
+3. deep_copy = copy.deepcopy(original)
+   - Creates a completely independent copy.
+   - Even nested objects are duplicated.
 """
+
